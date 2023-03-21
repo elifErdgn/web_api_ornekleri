@@ -1,13 +1,11 @@
-import 'dart:js';
-
 import 'package:butun_http_ornekleri/dio/riverpod_token/screens/splash_Screen.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
+//import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:grock/grock.dart';
 import 'package:provider/provider.dart';
 
-import 'dio/chatGPT/ghgh.dart';
+import 'dio/HWA_Login/core/auth_manager.dart';
 
 /// riverpod main
 /*
@@ -34,13 +32,18 @@ class MyApp extends StatelessWidget {
 
 /// HWA - LOGİN MAİN
 
-
 void main() {
-  runApp(MultiProvider(providers: [
-   // Provider(create: (context) =>)
-  ], child: MyApp(),),);
+  runApp(
+    MultiProvider(
+      providers: [
+        Provider<AuthenticationManager>(
+          create: (context) => AuthenticationManager(context: context),
+        ),
+      ],
+      child: MyApp(),
+    ),
+  );
 }
-
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -53,7 +56,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-     // home: SplashView(),
+      // home: SplashView(),
     );
   }
 }
