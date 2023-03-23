@@ -50,6 +50,9 @@ dependencies:
   shared_preferences: ^2.0.15
   flutter_svg: ^1.1.6
 
+  #ilk projeler
+  get: ^4.6.5
+
 
 dev_dependencies:
   flutter_test:

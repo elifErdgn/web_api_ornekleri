@@ -1,11 +1,10 @@
-import 'package:butun_http_ornekleri/dio/riverpod_token/screens/splash_Screen.dart';
 import 'package:flutter/material.dart';
-//import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:get_storage/get_storage.dart';
-import 'package:grock/grock.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:get/get.dart';
 
-import 'dio/HWA_Login/core/auth_manager.dart';
+import 'http/youtube_ornekleri/request_butonlari/http_list_screen.dart';
+//import 'package:flutter_riverpod/flutter_riverpod.dart';
+
 
 /// riverpod main
 /*
@@ -31,32 +30,54 @@ class MyApp extends StatelessWidget {
  */
 
 /// HWA - LOGİN MAİN
+//
+// void main() {
+//   runApp(
+//     MultiProvider(
+//       providers: [
+//         Provider<AuthenticationManager>(
+//           create: (context) => AuthenticationManager(context: context),
+//         ),
+//       ],
+//       child: MyApp(),
+//     ),
+//   );
+// }
+//
+// class MyApp extends StatelessWidget {
+//   const MyApp({super.key});
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       title: 'Flutter Demo',
+//       theme: ThemeData(
+//         primarySwatch: Colors.blue,
+//       ),
+//       // home: SplashView(),
+//     );
+//   }
+// }
 
-void main() {
-  runApp(
-    MultiProvider(
-      providers: [
-        Provider<AuthenticationManager>(
-          create: (context) => AuthenticationManager(context: context),
-        ),
-      ],
-      child: MyApp(),
-    ),
-  );
+
+///ilk denemeler
+void main() async {
+  //  await UserPreferences.init();
+
+  runApp( ProviderScope(child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      // home: SplashView(),
+      themeMode: ThemeMode.system,
+      home:  HttpListScreens(),
     );
   }
 }
