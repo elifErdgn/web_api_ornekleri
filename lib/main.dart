@@ -5,7 +5,6 @@ import 'package:get/get.dart';
 import 'http/youtube_ornekleri/request_butonlari/http_list_screen.dart';
 //import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-
 /// riverpod main
 /*
 void main() async {
@@ -28,7 +27,7 @@ class MyApp extends StatelessWidget {
 }
 
  */
-   
+
 /// HWA - LOGİN MAİN
 //
 // void main() {
@@ -60,12 +59,11 @@ class MyApp extends StatelessWidget {
 //   }
 // }
 
-
 ///ilk denemeler
 void main() async {
   //  await UserPreferences.init();
 
-  runApp( ProviderScope(child: const MyApp()));
+  runApp(ProviderScope(child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -77,7 +75,32 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       themeMode: ThemeMode.system,
-      home:  HttpListScreens(),
+      home: HttpListScreens(),
     );
   }
 }
+
+/// CHAT GPT
+/*
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => HomePage(),
+        '/login': (context) => LoginPage(),
+        '/register': (context) => RegisterPage(),
+      },
+    );
+  }
+}
+*/
