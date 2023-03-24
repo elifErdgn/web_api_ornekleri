@@ -11,8 +11,8 @@ class BaseClient {
   Future<dynamic> get(String api) async {
     var url = Uri.parse(baseUrl + api);
     var _headers = {
-      'Authorization': ' Bearer sifre75485745=',
-      'api_key': 'sdfsdfsd7f67df7fd6f76df7',
+      'Authorization': ' Bearer **=',
+      'api_key': '**' ,
     };
 
     var response = await client.get(url, headers: _headers);
@@ -25,9 +25,9 @@ class BaseClient {
     var url = Uri.parse(baseUrl + api);
     var _payload = json.encode(object);
     var _headers = {
-      'Authorization': ' Bearer sifre75485745=',
+      'Authorization': ' Bearer **=',
       'Content-Type': 'application/json',
-      'api_key': 'sdfsdfsd7f67df7fd6f76df7',
+      'api_key': '**',
     };
 
     var response = await client.post(url, headers: _headers, body: _payload);
@@ -40,9 +40,9 @@ class BaseClient {
     var url = Uri.parse(baseUrl + api);
     var _payload = json.encode(object);
     var _headers = {
-      'Authorization': ' Bearer sifre75485745=',
+      'Authorization': ' Bearer **=',
       'Content-Type': 'application/json',
-      'api_key': 'sdfsdfsd7f67df7fd6f76df7',
+      'api_key': '**',
     };
 
     var response = await client.put(url, headers: _headers, body: _payload);
@@ -54,9 +54,9 @@ class BaseClient {
   Future<dynamic> delete(String api) async {
     var url = Uri.parse(baseUrl + api);
     var _headers = {
-      'Authorization': ' Bearer sifre75485745=',
+      'Authorization': ' Bearer **=',
       'Content-Type': 'application/json',
-      'api_key': 'sdfsdfsd7f67df7fd6f76df7',
+      'api_key': '**',
     };
 
     var response = await client.delete(url, headers: _headers);
